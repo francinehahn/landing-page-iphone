@@ -1,0 +1,43 @@
+@import "../../styles/base";
+
+.header {
+    @include bgColors("black");
+    padding: 1rem 5rem;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        @include textColors("white");
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2.5rem;
+        a {
+            text-decoration: none;
+            @include textColors("white");
+            font-size: .9rem;
+        }
+        a:hover {
+            border-bottom: 2px solid white;
+            padding-bottom: .1rem;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid white;
+            @include textColors("white");
+            padding: .5rem 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            border: 2px solid #b700ff;
+        }
+    }
+}
