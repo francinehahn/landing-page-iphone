@@ -19,7 +19,7 @@ export default function Home() {
                 </p>
             </div>
 
-            <Image src={iphoneCover} alt="Imagem de um iphone"/>
+            <Image src={iphoneCover} alt=""/>
         </main>
     )
 }

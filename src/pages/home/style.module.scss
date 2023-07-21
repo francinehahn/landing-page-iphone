@@ -1,20 +1,11 @@
 @import "../../styles/base";
 
-@keyframes moveAndRotate {
+@keyframes changeColor {
     0% {
-      transform: translateX(0) rotate3d(0, 0, 0, 0) scale(1);
-    }
-    25% {
-      transform: translateX(10px) rotate3d(1, 1, 1, 35deg) scale(1.2);
-    }
-    50% {
-      transform: translateX(0) rotate3d(1, 0, 0, 20deg) scale(1.4);
-    }
-    75% {
-        transform: translateX(10px) rotate3d(0, 1, 0, 35deg) scale(1.2);
+      filter: hue-rotate(0);
     }
     100% {
-        transform: translateX(0) rotate3d(0, 0, 0, 0) scale(1);
+      filter: hue-rotate(360deg);
     }
 }
 
@@ -22,12 +13,12 @@
     @include bgColors("black");
     width: 100vw;
     height: 100vh;
-    padding: 3rem 10rem;
+    padding: 3rem 12rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
     overflow-x: hidden;
 
     div {
@@ -35,8 +26,9 @@
     }
 
     img {
-        width: 20rem;
-        height: 25rem;
-        animation: moveAndRotate 10s infinite;
+      width: 26rem;
+      height: 26rem;
+      background-size: cover;
+      animation: changeColor 5s infinite;
     }
 }
