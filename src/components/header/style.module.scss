@@ -1,5 +1,14 @@
 @import "../../styles/base";
 
+@keyframes changeColor {
+    0% {
+      filter: hue-rotate(0);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+
 .header {
     @include bgColors("black");
     padding: 1rem 5rem;
@@ -38,6 +47,7 @@
             @include textColors("white");
             padding: .5rem 1.5rem;
             cursor: pointer;
+            animation: changeColor 3s infinite;
         }
         button:hover {
             border: 2px solid #00db99;

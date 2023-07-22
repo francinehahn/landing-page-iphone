@@ -25,18 +25,6 @@
   }
 }
 
-.line-container {
-  position: relative;
-  flex: 1;
-}
-
-.line {
-  position: absolute;
-  background-color: white;
-  width: 50px;
-  height: 1px;
-}
-
 .firstSection {
   display: flex;
   justify-content: space-between;
@@ -62,6 +50,7 @@
       border: none;
       @include bgColors("green");
       cursor: pointer;
+      animation: changeColor 3s infinite;
     }
 
     button:hover {
