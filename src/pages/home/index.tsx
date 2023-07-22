@@ -2,6 +2,8 @@ import Head from "next/head"
 import styles from "./style.module.scss"
 import Image from "next/image"
 
+import { useCallback, useEffect, useState } from "react"
+
 import { Header } from "@/components/header/Header"
 
 import iphoneCover from "../../assets/iphone-cover.png"
@@ -11,6 +13,28 @@ import iphoneWaterProof from "../../assets/iphone-water-proof.jpg"
 import iphoneColors from "../../assets/iphone-colors.png"
 
 export default function Home() {
+    const [lines, setLines] = useState<{ id: number; x: number; y: number }[]>([])
+
+    const handleMouseMove = useCallback((e: MouseEvent) => {
+        const { clientX, clientY } = e
+        const { scrollLeft, scrollTop } = document.documentElement
+        const newLine = { id: Date.now(), x: clientX + scrollLeft, y: clientY + scrollTop }
+        setLines((prevLines) => [...prevLines, newLine])
+
+        setTimeout(() => {
+            setLines((prevLines) => prevLines.filter((line) => line.id !== newLine.id))
+        }, 1000)
+    }, [])
+
+    useEffect(() => {
+        document.addEventListener('mousemove', handleMouseMove)
+
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove)
+        }
+    }, [handleMouseMove])
+
+
     return (
         <>
             <Head>
@@ -30,7 +54,7 @@ export default function Home() {
                         <button>Comprar agora</button>
                     </div>
 
-                    <Image src={iphoneCover} alt="Imagem do novo iPhone"/>
+                    <Image src={iphoneCover} alt="Imagem do novo iPhone" priority/>
                 </section>
                 
                 <section className={styles.secondSection}>
@@ -67,6 +91,17 @@ export default function Home() {
                         <Image src={iphoneColors} alt="Imagem de dois iPhones coloridos"/>
                     </div>
                 </section>
+
+
+                <div className={styles.lineContainer}>
+                    {lines.map((line) => (
+                    <div
+                        key={line.id}
+                        className={styles.line}
+                        style={{ top: line.y + 'px', left: line.x + 'px' }}
+                    />
+                    ))}
+                </div>
             </main>
         </>
     )
