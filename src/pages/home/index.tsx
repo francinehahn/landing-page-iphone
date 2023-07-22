@@ -10,6 +10,8 @@ import iphoneScreen from "../../assets/iphone-screen.png"
 import iphoneWaterProof from "../../assets/iphone-water-proof.jpg"
 import iphoneColors from "../../assets/iphone-colors.png"
 
+import { motion } from 'framer-motion';
+
 export default function Home() {
     return (
         <>
@@ -21,16 +23,26 @@ export default function Home() {
 
             <main className={styles.main}>
                 <section className={styles.firstSection}>
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <h2>Conheça o novo iPhone</h2>
                         <p>
                             Câmera grande-angular inovadora de 48 MP. Tela duas vezes mais brilhante 
                             sob a luz do sol. Tudo com a potência do chip para smartphone que é o máximo.
                         </p>
                         <button>Comprar agora</button>
-                    </div>
+                    </motion.div>
 
-                    <Image src={iphoneCover} alt="Imagem do novo iPhone" priority/>
+                    <motion.div
+                        initial={{ opacity: 0, x: 40 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <Image src={iphoneCover} alt="Imagem do novo iPhone" priority/>
+                    </motion.div>
                 </section>
                 
                 <section className={styles.secondSection}>
