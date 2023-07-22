@@ -2,12 +2,13 @@ import Head from "next/head"
 import styles from "./style.module.scss"
 import Image from "next/image"
 
+import { Header } from "@/components/header/Header"
+
 import iphoneCover from "../../assets/iphone-cover.png"
 import iphoneCamera from "../../assets/iphone-camera.png"
 import iphoneScreen from "../../assets/iphone-screen.png"
 import iphoneWaterProof from "../../assets/iphone-water-proof.jpg"
 import iphoneColors from "../../assets/iphone-colors.png"
-import { Header } from "@/components/header/Header"
 
 export default function Home() {
     return (
@@ -26,6 +27,7 @@ export default function Home() {
                             Câmera grande-angular inovadora de 48 MP. Tela duas vezes mais brilhante 
                             sob a luz do sol. Tudo com a potência do chip para smartphone que é o máximo.
                         </p>
+                        <button>Comprar agora</button>
                     </div>
 
                     <Image src={iphoneCover} alt="Imagem do novo iPhone"/>
@@ -43,7 +45,10 @@ export default function Home() {
                     </div>
 
                     <div className={styles.screen}>
-                        <p>Aço inoxidável de qualidade cirúrgica.Tela mais resistente e duas vezes mais brilhante sob a luz do sol.</p>
+                        <p>
+                            Aço inoxidável de qualidade cirúrgica.Tela mais resistente e duas vezes 
+                            mais brilhante sob a luz do sol.
+                        </p>
                         <Image src={iphoneScreen} alt="Imagem da tela de um iPhone"/>
                     </div>
 
