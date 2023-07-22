@@ -1,12 +1,12 @@
 @import "../../styles/base";
 
 @keyframes changeColor {
-    0% {
-      filter: hue-rotate(0);
-    }
-    100% {
-      filter: hue-rotate(360deg);
-    }
+  0% {
+    filter: hue-rotate(0);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .main {
@@ -14,19 +14,91 @@
     padding: 3rem 12rem;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 7rem;
+    gap: 5rem;
     overflow-x: hidden;
 
-    div {
-        @include textColors("white");
+    p {
+      @include textColors("white");
+      font-size: 1rem;
+      line-height: 1.5rem;
     }
+}
 
-    img {
-      width: 26rem;
-      height: 30rem;
-      background-size: cover;
-      animation: changeColor 5s infinite;
+.firstSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  margin-top: 2rem;
+
+  div {
+    h2 {
+      @include textColors("white");
+      font-size: 2rem;
+      line-height: 3.5rem;
     }
+  }
+
+  img {
+    width: 26rem;
+    height: 30rem;
+    background-size: cover;
+    animation: changeColor 5s infinite;
+  }
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 45rem;
+
+  h3 {
+    @include textColors("white");
+    font-size: 1.7rem;
+    line-height: 3rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    margin-bottom: 5rem;
+    border-bottom: 1px solid rgba(171, 170, 170, 0.414);
+    padding-bottom: 1rem;
+  }
+}
+
+.camera {
+  img {
+    width: 25rem;
+    height: 15rem;
+  }
+}
+
+.screen {
+  img {
+    width: 20rem;
+    height: 16rem;
+    animation: changeColor 5s infinite;
+  }
+}
+
+.waterProof {
+  img {
+    width: 22rem;
+    height: 14rem;
+  }
+}
+
+.colors {
+  img {
+    width: 15rem;
+    height: 20rem;
+  } 
 }

@@ -7,7 +7,7 @@ export function Header() {
             <h1>TechProd</h1>
             <nav>
                 <Link href="#">Home</Link>
-                <Link href="#">O produto</Link>
+                <Link href="#features">O produto</Link>
                 <button>Comprar</button>
             </nav>
         </header>
