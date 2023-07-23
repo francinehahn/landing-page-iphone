@@ -11,7 +11,6 @@
 
 .main {
   padding: 3rem 12rem;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,38 +82,5 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
-
-    margin-bottom: 5rem;
-    border-bottom: 1px solid rgba(171, 170, 170, 0.414);
-    padding-bottom: 1rem;
   }
-}
-
-.camera {
-  img {
-    width: 25rem;
-    height: 15rem;
-  }
-}
-
-.screen {
-  img {
-    width: 20rem;
-    height: 16rem;
-    animation: changeColor 3s infinite;
-  }
-}
-
-.waterProof {
-  img {
-    width: 22rem;
-    height: 14rem;
-  }
-}
-
-.colors {
-  img {
-    width: 15rem;
-    height: 20rem;
-  } 
 }

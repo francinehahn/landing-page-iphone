@@ -10,7 +10,8 @@ import iphoneScreen from "../../assets/iphone-screen.png"
 import iphoneWaterProof from "../../assets/iphone-water-proof.jpg"
 import iphoneColors from "../../assets/iphone-colors.png"
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
+import { InView } from "@/components/inView/InView"
 
 export default function Home() {
     return (
@@ -24,9 +25,9 @@ export default function Home() {
             <main className={styles.main}>
                 <section className={styles.firstSection}>
                     <motion.div
-                        initial={{ opacity: 0, x: -40 }}
+                        initial={{ opacity: 0, x: -60 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 1.5 }}
                     >
                         <h2>Conheça o novo iPhone</h2>
                         <p>
@@ -37,9 +38,9 @@ export default function Home() {
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
+                        initial={{ opacity: 0, x: 60 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 1.5 }}
                     >
                         <Image src={iphoneCover} alt="Imagem do novo iPhone" priority/>
                     </motion.div>
@@ -47,37 +48,37 @@ export default function Home() {
                 
                 <section className={styles.secondSection}>
                     <h3 id="features">Características do produto</h3>
-                    
-                    <div className={styles.camera}>
+
+                    <InView className="camera">
                         <Image src={iphoneCamera} alt="Imagem da câmera do iPhone"/>
                         <p>
                             Câmera grande-angular inovadora de 48 MP. 
                             Tenha a qualidade de Hollywood na palma da sua mão!
                         </p>
-                    </div>
+                    </InView>
 
-                    <div className={styles.screen}>
+                    <InView className="screen">
                         <p>
                             Aço inoxidável de qualidade cirúrgica.Tela mais resistente e duas vezes 
                             mais brilhante sob a luz do sol.
                         </p>
                         <Image src={iphoneScreen} alt="Imagem da tela de um iPhone"/>
-                    </div>
+                    </InView>
 
-                    <div className={styles.waterProof}>
+                    <InView className="waterProof">
                         <Image src={iphoneWaterProof} alt="Imagem da tela de um iPhone molhada"/>
                         <p>
                             Ainda mais resistente à água. O novo iPhone pode sobreviver sendo submerso 
                             em águas profundas de até seis metros por 30 minutos.
                         </p>
-                    </div>
+                    </InView>
 
-                    <div className={styles.colors}>
+                    <InView className="colors">
                         <p>
                             Disponível em cinco cores diferentes: azul, roxo, cinza escuro, dourado claro e vermelho.
                         </p>
                         <Image src={iphoneColors} alt="Imagem de dois iPhones coloridos"/>
-                    </div>
+                    </InView>
                 </section>
             </main>
         </>

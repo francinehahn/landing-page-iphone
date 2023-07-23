@@ -8,7 +8,7 @@ export function Header() {
             className={style.header}
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 1.5 }}
         >
             <h1>TechProd</h1>
             <nav>

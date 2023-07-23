@@ -1,0 +1,43 @@
+@keyframes changeColor {
+    0% {
+      filter: hue-rotate(0);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+}
+
+.line {
+    margin-bottom: 5rem;
+    border-bottom: 1px solid rgba(171, 170, 170, 0.414);
+    padding-bottom: 1rem;
+}
+
+.camera {
+    img {
+      width: 25rem;
+      height: 15rem;
+    }
+}
+  
+.screen {
+    img {
+      width: 20rem;
+      height: 16rem;
+      animation: changeColor 3s infinite;
+    }
+}
+  
+.waterProof {
+    img {
+      width: 22rem;
+      height: 14rem;
+    }
+}
+  
+.colors {
+    img {
+      width: 15rem;
+      height: 20rem;
+    } 
+}
