@@ -10,7 +10,7 @@ This is a Next.js project that simulates a landing page to promote the new iPhon
 * SCSS
 
 ## 🌐Deploy
-
+https://landing-page-iphone.vercel.app/
 
 ## 📷Images
 ![Desktop1](./src/assets/print-desktop1.png)
