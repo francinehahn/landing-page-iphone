@@ -18,8 +18,10 @@ export default function Home() {
     return (
         <>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
                 <title>iPhone | Lançamento</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+                <meta name="description" content="Página de vendas do novo iPhone da Apple"/>
+                <meta name="keywords" content="iPhone, apple, celular, tecnologia"/>
             </Head>
 
             <Header/>
