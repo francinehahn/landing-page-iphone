@@ -1,10 +1,16 @@
-import {BsInstagram, BsFacebook, BsWhatsapp} from "react-icons/bs"
-import styles from "./style.module.scss"
 import Link from "next/link"
+import {BsInstagram, BsFacebook, BsWhatsapp} from "react-icons/bs"
+import { motion } from 'framer-motion'
+import styles from "./style.module.scss"
 
 export function SocialMedia() {
     return (
-        <div className={styles.socialMedia}>
+        <motion.div 
+            className={styles.socialMedia}
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+        >
             <BsWhatsapp/>
             <Link href="https://www.instagram.com/">
                 <BsInstagram/>
@@ -12,6 +18,6 @@ export function SocialMedia() {
             <Link href="https://www.facebook.com/">
                 <BsFacebook/>
             </Link>
-        </div>
+        </motion.div>
     )
 }

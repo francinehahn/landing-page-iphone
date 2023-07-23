@@ -27,9 +27,9 @@ export function InView({children, className}: InViewProps) {
             {isVisible && (
                 <motion.div
                     className={styles.line}
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 40 }}
-                    exit={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: isVisible ? 1 : 0}}
+                    exit={{ opacity: 0}}
                     transition={{ duration: 5 }}
                 >
                     {children}
