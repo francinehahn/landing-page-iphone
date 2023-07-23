@@ -12,12 +12,13 @@
 .header {
     @include bgColors("black");
     padding: 1rem 5rem;
-    position: sticky;
-    top: 0;
     z-index: 1000;
-
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 650px) {
+        padding: 1rem 2rem;
+    }
 
     h1 {
         @include textColors("white");
@@ -33,6 +34,10 @@
             text-decoration: none;
             @include textColors("white");
             font-size: .9rem;
+
+            @media screen and (max-width: 650px) {
+                display: none;
+            }
         }
         a:hover {
             border-bottom: 2px solid white;
