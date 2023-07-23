@@ -12,12 +12,14 @@ import iphoneColors from "../../assets/iphone-colors.png"
 
 import { motion } from 'framer-motion'
 import { InView } from "@/components/inView/InView"
+import { SocialMedia } from "@/components/socialMedia/SocialMedia"
 
 export default function Home() {
     return (
         <>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+                <title>iPhone | Lançamento</title>
             </Head>
 
             <Header/>
@@ -80,6 +82,8 @@ export default function Home() {
                         <Image src={iphoneColors} alt="Imagem de dois iPhones coloridos"/>
                     </InView>
                 </section>
+
+                <SocialMedia/>
             </main>
         </>
     )
